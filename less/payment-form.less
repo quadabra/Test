@@ -1,0 +1,207 @@
+@min-width: 320px;
+@mobile-width: 480px;
+@tablet-width: 768px;
+@desktop-width: 1000px;
+@form_background: #f7f8f8;
+@form_text-primary-color: #8494ab;
+@form_primary-font-size: 16px;
+@form_primary-line-height: 21px;
+@form_value-text-color: #383d43;
+@form_border-color: #e5eaef;
+
+.reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.form-text() {
+  margin: 0;
+  padding: 0;
+  font-size: @form_primary-font-size;
+  line-height: @form_primary-line-height;
+  color: @form_text-primary-color;
+  font-weight: 400;
+}
+
+.payment-form {
+  padding-top: 20px;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  background-color: @form_background;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.payment-form__table {
+  margin-top: 20px;
+}
+
+.payment-form__payment-title {
+  .form-text;
+  padding-left: 14px;
+}
+
+.payment-form__text {
+  .form-text;
+  padding-left: 10px;
+}
+
+.payment-form__value {
+  .form-text;
+  padding-left: 20px;
+  color: @form_value-text-color;
+}
+
+.payment-form__card-title {
+  padding-left: 14px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.payment-form__card-side {
+  .reset;
+  position: relative;
+  box-sizing: border-box;
+  width: 320px;
+  height: 240px;
+  border: 1px solid @form_border-color;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: @form_background;
+  z-index: 2;
+
+  &_back {
+    position: absolute;
+    top: 360px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.payment-form__card-side-title {
+  .form-text;
+  margin: 15px;
+}
+
+.payment-form__card-numbers {
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.payment-form__card-number {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 20%;
+  margin: 0 1.5%;
+  text-align: center;
+
+  &:first-of-type {
+    margin-left: 5.5%;
+  }
+
+  &:last-of-type {
+    margin-right: 5.5%;
+  }
+}
+
+.payment-form__card-dates {
+  font-size: 0;
+}
+
+.payment-form__select {
+  &:first-of-type {
+    width: 70px;
+    margin-left: 5.5%;
+  }
+
+  &:last-of-type {
+    width: 85px;
+    margin-left: 3%;
+  }
+}
+
+.payment-form__card-codes {
+  position: relative;
+  text-align: right;
+
+  &::before {
+    content: "";
+    margin-top: 27px;
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: #e4e9ee;
+  }
+}
+
+.payment-form__cardholder {
+  margin-top: 20px;
+  margin-left: 5.5%;
+
+  &::placeholder {
+    color: @form_text-primary-color;
+    transition-duration: 0.2s;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.payment-form__cvc-label {
+  .form-text;
+  margin-top: 15px;
+  display: block;
+  text-align: right;
+  margin-right: 5.5%;
+}
+
+.payment-form__cvc-number {
+  width: 130px;
+  text-align: center;
+  margin-right: 5.5%;
+}
+
+.payment-form__submit {
+  margin-top: 210px;
+  margin-bottom: 25px;
+  margin-left: 5.5%;
+}
+
+@media (min-width: @mobile-width) {
+  .payment-form {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .payment-form__card-side_back {
+    top: 220px;
+  }
+
+  .payment-form__submit {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .payment-form__card-side {
+    width: 350px;
+
+    &_back {
+      right: 5%;
+    }
+  }
+
+  .payment-form {
+    float: left;
+    width: 70%;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .payment-form {
+    max-width: 640px;
+  }
+}

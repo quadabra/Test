@@ -4,6 +4,9 @@
   "private": true,
   "description": "Тестовое задание",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "stylelint-config-htmlacademy": "0.1.x",
+    "eslint-config-htmlacademy": "0.3.x",
     "autoprefixer": "7.1.x",
     "browser-sync": "2.18.x",
     "del": "^3.0.0",
@@ -19,7 +22,7 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.0",
     "stylelint": "8.1.x",
-    "eslint": "4.2.0",
+    "eslint": "4.2.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

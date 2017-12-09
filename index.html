@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Платежи</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="payments">
+  <h1 class="visually-hidden">Мои платежи</h1>
+  <nav class="payments__nav navigation">
+    <button class="navigation__menu sandwich-button" type="button">
+      <span class="visually-hidden">menu</span>
+    </button>
+    <ul class="navigation__list">
+      <li>
+        <a class="navigation__link" href="#">Личный кабинет</a>
+      </li>
+      <li>
+        <a class="navigation__link navigation__link_active" href="#">Платежи</a>
+      </li>
+      <li>
+        <a class="navigation__link" href="#">История платежей</a>
+      </li>
+      <li>
+        <a class="navigation__link" href="#">Настройки</a>
+      </li>
+      <li>
+        <a class="navigation__link navigation__link_logout" href="">Выйти</a>
+      </li>
+    </ul>
+  </nav>
+  <form class="payment-form" action="#">
+    <h2 class="payment-form__payment-title">Информация по оплате:</h2>
+    <table class="payment-form__table">
+      <tr>
+        <td>
+          <p class="payment-form__text">Номер счета:</p>
+        </td>
+        <td>
+          <p class="payment-form__value">87123658716587</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="payment-form__text">Сумма платежа:</p>
+        </td>
+        <td>
+          <p class="payment-form__value">100 руб.</p>
+        </td>
+      </tr>
+    </table>
+    <h3 class="payment-form__card-title">Данные банковской карты</h3>
+    <fieldset class="payment-form__card-side payment-form__card-side_front">
+      <div class="payment-form__card-numbers">
+        <h4 class="payment-form__card-side-title">Номер карты</h4>
+        <input class="payment-form__card-number text-input" type="number" id="first-numbers" maxlength="4">
+        <label class="visually-hidden" for="first-numbers">Первая группа цифр</label>
+        <input class="payment-form__card-number text-input" type="number" id="second-numbers">
+        <label class="visually-hidden" for="second-numbers">Вторая группа цифр</label>
+        <input class="payment-form__card-number text-input" type="number" id="third-numbers">
+        <label class="visually-hidden" for="third-numbers">Третья группа цифр</label>
+        <input class="payment-form__card-number text-input" type="number" id="fourth-numbers">
+        <label class="visually-hidden" for="fourth-numbers">Четвёртая группа цифр</label>
+      </div>
+      <div class="payment-form__card-dates">
+        <h4 class="payment-form__card-side-title">Срок действия</h4>
+        <select class="payment-form__select select-input" name="Year" id="year">
+        </select>
+        <label class="visually-hidden" for="year">Год окончания срока действия карты</label>
+        <select class="payment-form__select select-input" name="Month" id="month">
+        </select>
+        <label class="visually-hidden" for="month">Месяц окончания срока действия карты</label>
+      </div>
+      <div>
+        <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты">
+        <label class="visually-hidden" for="cardholder">Имя владельца карты латинскими буквами</label>
+      </div>
+    </fieldset>
+    <fieldset class="payment-form__card-side payment-form__card-side_back">
+      <div class="payment-form__card-codes">
+        <label class="payment-form__cvc-label" for="cvc-numbers">Код CVV2 / CVC2</label>
+        <input class="payment-form__cvc-number text-input" type="number" id="cvc-numbers">
+      </div>
+    </fieldset>
+    <button class="payment-form__submit submit__button">Оплатить</button>
+  </form>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__container">
+    <p>
+      Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря,
+      ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+    </p>
+    <p>
+      Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+    </p>
+    <p>
+      Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+    </p>
+    <p>
+      Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что
+      угол
+      крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и
+      проявлениями
+      долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+    </p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

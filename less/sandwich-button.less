@@ -1,0 +1,27 @@
+.sandwich-button {
+  margin: 10px;
+  margin-left: 85%;
+  padding: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  background-image: url("../img/ic_menu_white_24px.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 0.3s;
+  outline: none;
+
+  &_active {
+    background-image: url("../img/ic_arrow_downward_white_24px.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .sandwich-button {
+    display: none;
+  }
+}

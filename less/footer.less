@@ -1,0 +1,26 @@
+@footer_text-color: #7f8591;
+@footer_bg-color: #373c43;
+
+.page-footer {
+  min-width: 320px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-footer__container {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: @footer_bg-color;
+  color: @footer_text-color;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    width: 640px;
+    float: right;
+  }
+}
