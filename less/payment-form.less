@@ -1,7 +1,3 @@
-@min-width: 320px;
-@mobile-width: 480px;
-@tablet-width: 768px;
-@desktop-width: 1000px;
 @form_background: #f7f8f8;
 @form_text-primary-color: #8494ab;
 @form_primary-font-size: 16px;
@@ -64,7 +60,7 @@
   position: relative;
   box-sizing: border-box;
   width: 320px;
-  height: 240px;
+  min-height: 236px;
   border: 1px solid @form_border-color;
   border-radius: 8px;
   overflow: hidden;
@@ -161,6 +157,14 @@
   width: 130px;
   text-align: center;
   margin-right: 5.5%;
+  padding-right: 35px;
+}
+
+.payment-form__cvc-info {
+  position: absolute;
+  z-index: 3;
+  top: 78px;
+  right: 25px;
 }
 
 .payment-form__submit {
@@ -202,6 +206,90 @@
 
 @media (min-width: @desktop-width) {
   .payment-form {
-    max-width: 640px;
+    box-sizing: border-box;
+    max-width: 639px;
+    padding: 42px 20px 44px 15px;
+  }
+
+  .payment-form__table {
+    margin-top: 15px;
+  }
+
+  .payment-form__text {
+    margin-top: 1px;
+  }
+
+  .payment-form__value {
+    padding-left: 34px;
+    margin-top: 1px;
+  }
+
+  .payment-form__card-title {
+    font-size: 22px;
+    margin-top: 27px;
+  }
+
+  .payment-form__card-side {
+    margin-top: 23px;
+    margin-left: 14px;
+    min-height: 236px;
+
+    &_back {
+      width: 370px;
+      top: 204px;
+      right: 46px;
+    }
+  }
+
+  .payment-form__card-side-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    &_date {
+      margin-top: 13px;
+    }
+  }
+
+  .payment-form__card-number {
+    margin: 4px 0 0 9px;
+    width: 65px;
+
+    &:first-of-type {
+      margin-left: 14px;
+    }
+  }
+
+  .payment-form__select {
+    margin: 4px 0 0 8px;
+    background-image: url("../img/expand.png");
+    background-position: 60px center;
+
+    &:first-of-type {
+      margin-left: 14px;
+      background-position: 43px center;
+    }
+  }
+
+  .payment-form__cardholder {
+    margin: 12px 0 0 14px;
+    width: 320px;
+  }
+
+  .payment-form__cvc-label {
+    margin-right: 22px;
+  }
+
+  .payment-form__cvc-number {
+    margin: 2px 14px 0 0;
+    width: 138px;
+  }
+
+  .payment-form__cvc-info {
+    top: 87px;
+    right: 24px;
+  }
+
+  .payment-form__submit {
+    margin: 40px 0 0 29px;
   }
 }
