@@ -35,7 +35,13 @@
   color: @menu-text;
   text-decoration: none;
 
-  &_active {
+  &:hover,
+  &:focus {
+    background-color: lighten(@menu-background, 10%);
+  }
+
+  &_active,
+  &:active {
     color: @menu-text-active;
     background-color: @menu-bg-active;
   }
