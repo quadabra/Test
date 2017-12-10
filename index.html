@@ -9,6 +9,9 @@
 <body>
 <main class="payments">
   <h1 class="visually-hidden">Мои платежи</h1>
+
+  <!-- Меню навигации -->
+
   <nav class="payments__nav navigation">
     <button class="navigation__menu sandwich-button" type="button">
       <span class="visually-hidden">menu</span>
@@ -31,6 +34,9 @@
       </li>
     </ul>
   </nav>
+
+  <!-- Форма ввода данных карты -->
+
   <form class="payment-form" action="#">
     <h2 class="payment-form__payment-title">Информация по оплате:</h2>
     <table class="payment-form__table">
@@ -52,45 +58,70 @@
       </tr>
     </table>
     <h3 class="payment-form__card-title">Данные банковской карты</h3>
+
+    <!-- Данные с лицевой стороны карты -->
+
     <fieldset class="payment-form__card-side payment-form__card-side_front">
       <div class="payment-form__card-numbers">
         <h4 class="payment-form__card-side-title">Номер карты</h4>
+
         <input class="payment-form__card-number text-input" type="number" id="first-numbers" maxlength="4">
         <label class="visually-hidden" for="first-numbers">Первая группа цифр</label>
+
         <input class="payment-form__card-number text-input" type="number" id="second-numbers">
         <label class="visually-hidden" for="second-numbers">Вторая группа цифр</label>
+
         <input class="payment-form__card-number text-input" type="number" id="third-numbers">
         <label class="visually-hidden" for="third-numbers">Третья группа цифр</label>
+
         <input class="payment-form__card-number text-input" type="number" id="fourth-numbers">
         <label class="visually-hidden" for="fourth-numbers">Четвёртая группа цифр</label>
+
       </div>
+
       <div class="payment-form__card-dates">
         <h4 class="payment-form__card-side-title payment-form__card-side-title_date">Срок действия</h4>
+
         <select class="payment-form__select select-input" name="Year" id="year">
         </select>
         <label class="visually-hidden" for="year">Год окончания срока действия карты</label>
+
         <select class="payment-form__select select-input" name="Month" id="month">
         </select>
         <label class="visually-hidden" for="month">Месяц окончания срока действия карты</label>
+
       </div>
       <div>
         <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты">
         <label class="visually-hidden" for="cardholder">Имя владельца карты латинскими буквами</label>
       </div>
     </fieldset>
+
+    <!-- Тыльная сторона карты -->
+
     <fieldset class="payment-form__card-side payment-form__card-side_back">
       <div class="payment-form__card-codes">
+
         <label class="payment-form__cvc-label" for="cvc-numbers">Код CVV2 / CVC2</label>
         <input class="payment-form__cvc-number text-input" type="number" id="cvc-numbers">
+
         <a class="payment-form__cvc-info" href="#">
           <span class="visually-hidden">Помощь</span>
           <img src="img/info.png" width="26" height="26" alt="Информация">
+
         </a>
+
       </div>
     </fieldset>
     <button class="payment-form__submit submit__button">Оплатить</button>
   </form>
+
+  <!-- Конец формы ввода данных карты -->
+
 </main>
+
+<!-- Футер -->
+
 <footer class="page-footer">
   <div class="page-footer__container">
     <p class="page-footer__text">
