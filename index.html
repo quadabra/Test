@@ -111,7 +111,7 @@
 
       </div>
       <div>
-        <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты" pattern="[A-Z]" minlength="4" required>
+        <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты" pattern="^[A-Z\s]+$" minlength="4" required>
         <label class="visually-hidden" for="cardholder">Имя владельца карты латинскими буквами</label>
       </div>
     </fieldset>
