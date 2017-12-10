@@ -13,9 +13,9 @@ var del = require("del");
 var run = require("run-sequence");
 
 gulp.task('uglify', function() {
-  gulp.src('js/*.js')
+  gulp.src('js/script.js')
     .pipe(uglify())
-    .pipe(rename("*.min.js"))
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest('js'))
 });
 
@@ -37,8 +37,9 @@ gulp.task("copy", function () {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "img/**",
-    "js/*min.js",
-    "css/*min.css"
+    "js/*.min.js",
+    "css/*.min.css",
+    "*.html"
   ], {
     base: "."
   })
