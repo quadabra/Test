@@ -1,23 +1,27 @@
 .payments {
   background-color: #f7f8f8;
   min-width: 320px;
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .payments {
     background-color: #101114;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .payments {
-    width: 960px;
     margin: 79px auto 0;
+  }
+
+  .payments__container {
+    width: 960px;
+    margin: 0 auto;
   }
 }

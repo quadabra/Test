@@ -18,11 +18,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .page-footer__container {
     width: 640px;
     float: right;
     padding: 13px 40px 30px 30px;
-    margin-bottom: 200px;
+    border-top: 1px solid transparent;
   }
 
   .page-footer__text {

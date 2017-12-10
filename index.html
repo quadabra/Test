@@ -8,6 +8,7 @@
 </head>
 <body>
 <main class="payments">
+  <div class="payments__container">
   <h1 class="visually-hidden">Мои платежи</h1>
 
   <!-- Меню навигации -->
@@ -37,7 +38,7 @@
 
   <!-- Форма ввода данных карты -->
 
-  <form class="payment-form" action="#">
+  <form class="payment-form" action="#" method="post">
     <h2 class="payment-form__payment-title">Информация по оплате:</h2>
     <table class="payment-form__table">
       <tr>
@@ -65,16 +66,16 @@
       <div class="payment-form__card-numbers">
         <h4 class="payment-form__card-side-title">Номер карты</h4>
 
-        <input class="payment-form__card-number text-input" type="number" id="first-numbers" maxlength="4">
+        <input class="payment-form__card-number text-input" type="tel" id="first-numbers" pattern="[0-9]{4}" maxlength="4" required>
         <label class="visually-hidden" for="first-numbers">Первая группа цифр</label>
 
-        <input class="payment-form__card-number text-input" type="number" id="second-numbers">
+        <input class="payment-form__card-number text-input" type="tel" id="second-numbers" pattern="[0-9]{4}" maxlength="4" required>
         <label class="visually-hidden" for="second-numbers">Вторая группа цифр</label>
 
-        <input class="payment-form__card-number text-input" type="number" id="third-numbers">
+        <input class="payment-form__card-number text-input" type="tel" id="third-numbers" pattern="[0-9]{4}" maxlength="4" required>
         <label class="visually-hidden" for="third-numbers">Третья группа цифр</label>
 
-        <input class="payment-form__card-number text-input" type="number" id="fourth-numbers">
+        <input class="payment-form__card-number text-input" type="tel" id="fourth-numbers" pattern="[0-9]{4}" maxlength="4" required>
         <label class="visually-hidden" for="fourth-numbers">Четвёртая группа цифр</label>
 
       </div>
@@ -82,17 +83,35 @@
       <div class="payment-form__card-dates">
         <h4 class="payment-form__card-side-title payment-form__card-side-title_date">Срок действия</h4>
 
-        <select class="payment-form__select select-input" name="Year" id="year">
-        </select>
-        <label class="visually-hidden" for="year">Год окончания срока действия карты</label>
-
-        <select class="payment-form__select select-input" name="Month" id="month">
+        <select class="payment-form__select select-input" name="Year" id="month">
+          <option value="01" selected>01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
         </select>
         <label class="visually-hidden" for="month">Месяц окончания срока действия карты</label>
 
+        <select class="payment-form__select select-input" name="Month" id="year">
+          <option value="2017" selected>2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+        <label class="visually-hidden" for="year">Год окончания срока действия карты</label>
+
       </div>
       <div>
-        <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты">
+        <input class="payment-form__cardholder text-input" type="text" id="cardholder" placeholder="Держатель карты" pattern="[A-Za-z]" minlength="4" required>
         <label class="visually-hidden" for="cardholder">Имя владельца карты латинскими буквами</label>
       </div>
     </fieldset>
@@ -103,7 +122,7 @@
       <div class="payment-form__card-codes">
 
         <label class="payment-form__cvc-label" for="cvc-numbers">Код CVV2 / CVC2</label>
-        <input class="payment-form__cvc-number text-input" type="number" id="cvc-numbers">
+        <input class="payment-form__cvc-number text-input" type="tel" id="cvc-numbers"  pattern="[0-9]{3}" maxlength="3" required>
 
         <a class="payment-form__cvc-info" href="#">
           <span class="visually-hidden">Помощь</span>
@@ -117,7 +136,7 @@
   </form>
 
   <!-- Конец формы ввода данных карты -->
-
+  </div>
 </main>
 
 <!-- Футер -->
